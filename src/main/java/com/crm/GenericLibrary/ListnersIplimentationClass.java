@@ -12,21 +12,28 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.io.Files;
 
 public class ListnersIplimentationClass implements ITestListener {
+	
+	ExtentReports report;
+	ExtentTest test;
 
 	public void onTestStart(ITestResult result) {
 
 		String MethodName = result.getMethod().getMethodName();
-		Reporter.log(MethodName + "--- testscript execution started");
+		test = report.createTest(MethodName);
 		
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		String MethodName = result.getMethod().getMethodName();
-		Reporter.log(MethodName + "--- testscript execution sucessfull - PASS");
-		
+	    test.log(Status.PASS, MethodName+"------>passed");
 	}
 
 	public void onTestFailure(ITestResult result) 
@@ -49,6 +56,14 @@ public class ListnersIplimentationClass implements ITestListener {
 		{
 				
 		}
+		
+		test.log(Status.FAIL,failTestName+"---->falied");
+		//it will capture the expectation and log it in the report
+		test.log(Status.FAIL,result.getThrowable());
+		test.addScreenCaptureFromPath(sdate);
+		
+		
+		
 //		test.log(Status.FAIL,result.getMethod().getMethodName()+"Failed");
 //		test.log(Status.FAIL, result.getThrowable());
 //		//test.addScreenCaptureFromPath(desc.getAbsolutePath());
@@ -86,10 +101,14 @@ public class ListnersIplimentationClass implements ITestListener {
 //		}
 		
 	}
+	
+	
 
 	public void onTestSkipped(ITestResult result) {
 		String MethodName = result.getMethod().getMethodName();
-		Reporter.log(MethodName + "--- TestScript Skipped");
+		test.log(Status.SKIP,MethodName+"--->skipped");
+		// itwill capture the exception and log it in the report
+		test.log(Status.SKIP,result.getThrowable());
 		
 	}
 
@@ -104,12 +123,30 @@ public class ListnersIplimentationClass implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
+		// Execution will start here
+		/*Configure the report*/
+		ExtentSparkReporter htmlReport = new ExtentSparkReporter("./ExtentReports/");
+		htmlReport.config().setTheme(Theme.DARK);
+		htmlReport.config().setReportName("Selenium Execution Report");
+		
+		report = new ExtentReports();
+		report.attachReporter(htmlReport);
+		report.setSystemInfo("Base-Browser", "Chrome");
+		report.setSystemInfo("base-url","https://localhost:8888");
+		report.setSystemInfo("Reporter Name","Narayan");
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
 	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
+		// consolidate all the parameters and generate the report
+		report.flush();
 		
 	}
 
