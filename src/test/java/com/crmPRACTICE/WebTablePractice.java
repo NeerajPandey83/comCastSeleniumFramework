@@ -28,6 +28,7 @@ public class WebTablePractice extends BaseClass{
 		
 		 for(WebElement check:ckeckBox)
 		 {
+			 
 			 check.click();
 			 Reporter.log("all checkbox selected",true);
 		 }

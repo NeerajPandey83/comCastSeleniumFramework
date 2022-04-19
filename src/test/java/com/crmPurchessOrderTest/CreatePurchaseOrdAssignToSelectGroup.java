@@ -13,6 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CreatePurchaseOrdAssignToSelectGroup {
 	@Test(groups = "regrassionTest")
 	public void createPurchaseOrdAssignToSelectGroup() throws IOException {
@@ -34,6 +36,7 @@ public class CreatePurchaseOrdAssignToSelectGroup {
 	/*step 2: launch the browser*/
 		WebDriver driver = null;
 		if(BROWS.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
 		}
 		else if(BROWS.equalsIgnoreCase("firefox")) {

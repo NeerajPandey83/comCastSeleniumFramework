@@ -52,7 +52,7 @@ public class BaseClass {
 		
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
-			//WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		

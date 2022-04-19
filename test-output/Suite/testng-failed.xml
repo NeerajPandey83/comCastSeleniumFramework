@@ -3,16 +3,32 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.crmContactsTest.CreateContactTest">
-        <methods>
-          <include name="ctreateOrgTest"/>
-        </methods>
-      </class> <!-- com.crmContactsTest.CreateContactTest -->
       <class name="com.crmOrganisationTest.CreateOrgWithIndustryType">
         <methods>
           <include name="ctreateOrgTest"/>
         </methods>
       </class> <!-- com.crmOrganisationTest.CreateOrgWithIndustryType -->
+      <class name="com.crmOrganisationTest.CreateOrganizationTest">
+        <methods>
+          <include name="createOrganizationTest"/>
+        </methods>
+      </class> <!-- com.crmOrganisationTest.CreateOrganizationTest -->
+      <class name="com.crmContactsTest.CreateContactTest">
+        <methods>
+          <include name="ctreateOrgTest"/>
+        </methods>
+      </class> <!-- com.crmContactsTest.CreateContactTest -->
+      <class name="com.crmContactsTest.CreateContactWithBaseClassTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchTheBrowser"/>
+          <include name="closeDb"/>
+          <include name="createContactWithBaseClassTest"/>
+          <include name="connectDataBase"/>
+          <include name="login"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- com.crmContactsTest.CreateContactWithBaseClassTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

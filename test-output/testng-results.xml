@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-14T10:14:58 IST" name="Default suite" finished-at="2022-03-14T10:15:05 IST" duration-ms="7091">
+  <suite started-at="2022-04-17T23:59:20 IST" name="Suite" finished-at="2022-04-18T00:00:08 IST" duration-ms="47760">
     <groups>
+      <group name="regrassionTest">
+        <method signature="CreatePurchaseAssGroupSelectSelling.createPurchaseAssGroupSelectSelling()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling@71def8f8]" name="createPurchaseAssGroupSelectSelling" class="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling"/>
+        <method signature="CreatePurchaseOrdAssignToSelectGroup.createPurchaseOrdAssignToSelectGroup()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseOrdAssignToSelectGroup@3d5c822d]" name="createPurchaseOrdAssignToSelectGroup" class="com.crmPurchessOrderTest.CreatePurchaseOrdAssignToSelectGroup"/>
+      </group> <!-- regrassionTest -->
+      <group name="smokeTest">
+        <method signature="CreatePurchaseAssGroupSelectMarketing.createPurchaseAssGroupSelectMarketing()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectMarketing@16610890]" name="createPurchaseAssGroupSelectMarketing" class="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectMarketing"/>
+        <method signature="CreatePurchaseAssGroupSelectSelling.createPurchaseAssGroupSelectSelling()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling@71def8f8]" name="createPurchaseAssGroupSelectSelling" class="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling"/>
+        <method signature="CreatePurchaseAssGroupSelectSupportGroup.createPurchaseAssGroupSelectSupportGroup()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSupportGroup@4dbb42b7]" name="createPurchaseAssGroupSelectSupportGroup" class="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSupportGroup"/>
+        <method signature="CreatePurchessOrdTest.createPurchessOrdTest()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchessOrdTest@2c1b194a]" name="createPurchessOrdTest" class="com.crmPurchessOrderTest.CreatePurchessOrdTest"/>
+      </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2022-03-14T10:14:58 IST" name="Default test" finished-at="2022-03-14T10:15:05 IST" duration-ms="7091">
-      <class name="com.crmPRACTICE.DemoOfNavigationTest">
-        <test-method signature="demoOfNavigationTest()[pri:0, instance:com.crmPRACTICE.DemoOfNavigationTest@a2431d0]" started-at="2022-03-14T10:14:58 IST" name="demoOfNavigationTest" finished-at="2022-03-14T10:15:05 IST" duration-ms="7040" status="PASS">
+    <test started-at="2022-04-17T23:59:20 IST" name="Test-2" finished-at="2022-04-17T23:59:58 IST" duration-ms="38332">
+      <class name="com.crmPurchessOrderTest.CreatePurchessOrdTest">
+        <test-method signature="createPurchessOrdTest()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchessOrdTest@2c1b194a]" started-at="2022-04-17T23:59:20 IST" name="createPurchessOrdTest" finished-at="2022-04-17T23:59:48 IST" duration-ms="27887" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demoOfNavigationTest -->
-      </class> <!-- com.crmPRACTICE.DemoOfNavigationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- createPurchessOrdTest -->
+      </class> <!-- com.crmPurchessOrderTest.CreatePurchessOrdTest -->
+      <class name="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSupportGroup">
+        <test-method signature="createPurchaseAssGroupSelectSupportGroup()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSupportGroup@4dbb42b7]" started-at="2022-04-17T23:59:48 IST" name="createPurchaseAssGroupSelectSupportGroup" finished-at="2022-04-17T23:59:58 IST" duration-ms="10388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPurchaseAssGroupSelectSupportGroup -->
+      </class> <!-- com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSupportGroup -->
+    </test> <!-- Test-2 -->
+    <test started-at="2022-04-17T23:59:20 IST" name="Test-1" finished-at="2022-04-18T00:00:08 IST" duration-ms="47760">
+      <class name="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectMarketing">
+        <test-method signature="createPurchaseAssGroupSelectMarketing()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectMarketing@16610890]" started-at="2022-04-17T23:59:48 IST" name="createPurchaseAssGroupSelectMarketing" finished-at="2022-04-17T23:59:58 IST" duration-ms="10450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPurchaseAssGroupSelectMarketing -->
+      </class> <!-- com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectMarketing -->
+      <class name="com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling">
+        <test-method signature="createPurchaseAssGroupSelectSelling()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling@71def8f8]" started-at="2022-04-17T23:59:58 IST" name="createPurchaseAssGroupSelectSelling" finished-at="2022-04-18T00:00:08 IST" duration-ms="9367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPurchaseAssGroupSelectSelling -->
+      </class> <!-- com.crmPurchessOrderTest.CreatePurchaseAssGroupSelectSelling -->
+      <class name="com.crmPurchessOrderTest.CreatePurchaseOrdAssignToSelectGroup">
+        <test-method signature="createPurchaseOrdAssignToSelectGroup()[pri:0, instance:com.crmPurchessOrderTest.CreatePurchaseOrdAssignToSelectGroup@3d5c822d]" started-at="2022-04-17T23:59:20 IST" name="createPurchaseOrdAssignToSelectGroup" finished-at="2022-04-17T23:59:48 IST" duration-ms="27887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPurchaseOrdAssignToSelectGroup -->
+      </class> <!-- com.crmPurchessOrderTest.CreatePurchaseOrdAssignToSelectGroup -->
+    </test> <!-- Test-1 -->
+  </suite> <!-- Suite -->
 </testng-results>

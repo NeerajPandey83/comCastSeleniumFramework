@@ -18,6 +18,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CreateContactWithOrgTest {
 	@Test
 	public void ctreateOrgTest() throws IOException {
@@ -49,7 +51,7 @@ public class CreateContactWithOrgTest {
 		
 		WebDriver driver = null;
 		if(BROWSER.equalsIgnoreCase("chrome")) 
-		{
+		{   WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		else if(BROWSER.equalsIgnoreCase("firefox")) {

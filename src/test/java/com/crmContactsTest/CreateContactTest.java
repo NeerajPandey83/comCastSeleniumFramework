@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreateContactTest {
@@ -24,6 +25,10 @@ public class CreateContactTest {
 		/* Generate random number*/
 		Random ran = new Random();
 		ran.nextInt(500);
+		
+		
+		//Assert.fail();
+		
 		
 		FileInputStream fis = new FileInputStream(".\\src\\test\\resources\\commondata.properties");
 		Properties pObj = new Properties();

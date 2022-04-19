@@ -14,6 +14,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CreatePurchaseAssGroupSelectSelling {
 	@Test(groups = {"smokeTest","regrassionTest"})
 	public void createPurchaseAssGroupSelectSelling() throws IOException {
@@ -34,6 +36,7 @@ public class CreatePurchaseAssGroupSelectSelling {
 /*step 2: launch the browser*/
 	WebDriver driver = null;
 	if(BROWS.equalsIgnoreCase("chrome")) {
+		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
 	}
 	else if(BROWS.equalsIgnoreCase("firefox")) {

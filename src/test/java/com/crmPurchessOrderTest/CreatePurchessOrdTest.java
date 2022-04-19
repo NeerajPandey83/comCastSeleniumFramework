@@ -17,6 +17,8 @@ import org.testng.annotations.Test;
 
 import com.mysql.cj.jdbc.Driver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CreatePurchessOrdTest {
 	@Test(groups = "smokeTest")
 	public void createPurchessOrdTest() throws IOException  {
@@ -38,6 +40,7 @@ public class CreatePurchessOrdTest {
 	/*step 2: launch the browser*/
 		WebDriver driver = null;
 		if(BROWS.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
 		}
 		else if(BROWS.equalsIgnoreCase("firefox")) {

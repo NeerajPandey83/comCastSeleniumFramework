@@ -46,6 +46,7 @@ public class ListnersIplimentationClass implements ITestListener {
 		//String Browser = result.getParameters(BROSWER);
 		String sdate =new Date().toString().replace(":", "-").replace(" ", "-");
 		File  desc=new File("./ScreenShort/"+failTestName+"-"+sdate+".png");
+		String path2 = desc.getAbsolutePath();
 		
 		try
 		{  
@@ -60,7 +61,7 @@ public class ListnersIplimentationClass implements ITestListener {
 		test.log(Status.FAIL,failTestName+"---->falied");
 		//it will capture the expectation and log it in the report
 		test.log(Status.FAIL,result.getThrowable());
-		test.addScreenCaptureFromPath(sdate);
+		test.addScreenCaptureFromPath(path2);
 		
 		
 		
@@ -107,7 +108,7 @@ public class ListnersIplimentationClass implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		String MethodName = result.getMethod().getMethodName();
 		test.log(Status.SKIP,MethodName+"--->skipped");
-		// itwill capture the exception and log it in the report
+		// it will capture the exception and log it in the report
 		test.log(Status.SKIP,result.getThrowable());
 		
 	}
@@ -125,22 +126,18 @@ public class ListnersIplimentationClass implements ITestListener {
 	public void onStart(ITestContext context) {
 		// Execution will start here
 		/*Configure the report*/
-		ExtentSparkReporter htmlReport = new ExtentSparkReporter("./ExtentReports/");
+		ExtentSparkReporter htmlReport = new ExtentSparkReporter("./ExtentReports/extentreport"+new JavaUtility().getSystemDateFormate()+".html");
+		htmlReport.config().setDocumentTitle("SDET-30 Execution Report");
 		htmlReport.config().setTheme(Theme.DARK);
 		htmlReport.config().setReportName("Selenium Execution Report");
 		
 		report = new ExtentReports();
 		report.attachReporter(htmlReport);
 		report.setSystemInfo("Base-Browser", "Chrome");
+		report.setSystemInfo("OS", "windows");
 		report.setSystemInfo("base-url","https://localhost:8888");
 		report.setSystemInfo("Reporter Name","Narayan");
-		
-		
-		
-		
-		
-		
-		
+	
 		
 	}
 
